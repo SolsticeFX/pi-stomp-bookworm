@@ -24,6 +24,8 @@ sudo apt-get -y install virtualenv python3-pip python3-dev python3-zeroconf buil
                         libgtk2.0-dev libgtkmm-2.4-dev liblrdf0-dev libsamplerate0-dev libsigc++-2.0-dev libsndfile1-dev libzita-convolver-dev \
                         libzita-resampler-dev lv2-dev p7zip-full python3-all python3-setuptools libreadline-dev zita-alsa-pcmi-utils hostapd \
                         dnsmasq iptables python3-smbus liblo-dev python3-liblo libzita-alsa-pcmi-dev authbind rcconf libfluidsynth-dev lockfile-progs
+                        
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 #Install Python Dependancies
 sudo pip3 install pyserial==3.0 pystache==0.5.4 aggdraw==1.3.11 scandir backports.shutil-get-terminal-size
@@ -114,6 +116,8 @@ sudo ln -sf /usr/lib/systemd/system/mod-amidithru.service /etc/systemd/system/mu
 sudo ln -sf /usr/lib/systemd/system/mod-touchosc2midi.service /etc/systemd/system/multi-user.target.wants
 sudo ln -sf /usr/lib/systemd/system/mod-midi-merger.service /etc/systemd/system/multi-user.target.wants
 sudo ln -sf /usr/lib/systemd/system/mod-midi-merger-broadcaster.service /etc/systemd/system/multi-user.target.wants
+
+sed -i -e 's/collections.MutableMapping/collections.abc.MutableMapping/' /usr/local/lib/python3.11/dist-packages/tornado/httputil.py
 
 #Create users and groups so services can run as user instead of root
 sudo adduser --no-create-home --system --group jack
