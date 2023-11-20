@@ -16,7 +16,7 @@
 # along with pi-stomp.  If not, see <https://www.gnu.org/licenses/>.
 
 sudo cp setup/services/*.service /usr/lib/systemd/system/
-sudo ln -sf /usr/lib/systemd/system/mod-ala-pi-stomp.service /etc/systemd/system/multi-user.target.wants
+#sudo ln -sf /usr/lib/systemd/system/mod-ala-pi-stomp.service /etc/systemd/system/multi-user.target.wants
 
 if [ x"$has_ttymidi" == x"true" ]; then
     echo "Enabling ttymidi service"
