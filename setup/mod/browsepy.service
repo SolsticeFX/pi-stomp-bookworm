@@ -7,8 +7,8 @@ Environment=BROWSEPY_PORT=8081
 
 WorkingDirectory=/home/pistomp/data/user-files/
 ExecStart=/usr/local/bin/browsepy 0.0.0.0 8081 --directory /home/pistomp/data/user-files --upload /home/pistomp/data/user-files --removable /home/pistomp/data/user-files
-User=we
-Group=we
+User=pistomp
+Group=pistomp
 Restart=always
 RestartSec=2
 
