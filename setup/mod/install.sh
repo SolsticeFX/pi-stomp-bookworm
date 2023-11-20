@@ -117,7 +117,7 @@ sudo ln -sf /usr/lib/systemd/system/mod-touchosc2midi.service /etc/systemd/syste
 sudo ln -sf /usr/lib/systemd/system/mod-midi-merger.service /etc/systemd/system/multi-user.target.wants
 sudo ln -sf /usr/lib/systemd/system/mod-midi-merger-broadcaster.service /etc/systemd/system/multi-user.target.wants
 
-sed -i -e 's/collections.MutableMapping/collections.abc.MutableMapping/' /usr/local/lib/python3.11/dist-packages/tornado/httputil.py
+sudo sed -i -e 's/collections.MutableMapping/collections.abc.MutableMapping/' /usr/local/lib/python3.11/dist-packages/tornado/httputil.py
 
 #Create users and groups so services can run as user instead of root
 sudo adduser --no-create-home --system --group jack
