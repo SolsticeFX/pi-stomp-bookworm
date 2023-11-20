@@ -33,10 +33,10 @@ sudo chown -R $USER:$USER /usr/lib/pistomp-wifi
 sudo chmod +x -R /usr/lib/pistomp-wifi
 
 # USB automounter
-#sudo dpkg -i setup/services/usbmount.deb
+sudo dpkg -i setup/services/usbmount.deb
 
 # Disable wait for network on boot
-sudo raspi-config nonint do_boot_wait 1
+#sudo raspi-config nonint do_boot_wait 1
 
 # Copy wifi_check script
 sudo cp setup/services/wifi_check.sh /etc/wpa_supplicant/
