@@ -9,7 +9,7 @@ Environment=JACK_NO_AUDIO_RESERVATION=1
 Environment=JACK_PROMISCUOUS_SERVER=jack
 LimitRTPRIO=infinity
 LimitMEMLOCK=infinity
-ExecStart=/etc/jackdrc
+ExecStart=jackd -t 2000 -R -P 95 -d alsa -d hw:2 -r 48000 -p 256 -n 2 -X seq -s
 User=jack
 Group=jack
 Restart=always
