@@ -1,17 +1,16 @@
-
 [Unit]
 Description=JACK2 Audio Server
 #After=sound.target
 
 [Service]
+User=pistomp
+Group=audio
 Environment=LV2_PATH=/home/pistomp/.lv2
 Environment=JACK_NO_AUDIO_RESERVATION=1
 Environment=JACK_PROMISCUOUS_SERVER=jack
-LimitRTPRIO=infinity
+LimitRTPRIO=99
 LimitMEMLOCK=infinity
-ExecStart=jackd -t 2000 -R -P 95 -d alsa -d hw:2 -r 48000 -p 256 -n 2 -X seq -s
-User=jack
-Group=jack
+ExecStart=jackd -t 2000 -R -P 99 -d alsa -d hw:2 -m -r 48000 -p 64 -n 3 -X seq -s
 Restart=always
 RestartSec=1
 
