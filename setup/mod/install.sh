@@ -121,12 +121,12 @@ sudo sed -i -e 's/collections.MutableMapping/collections.abc.MutableMapping/' /u
 
 #Create users and groups so services can run as user instead of root
 sudo adduser --no-create-home --system --group jack
-sudo adduser pistomp jack --quiet
+sudo adduser $USER jack --quiet
 sudo adduser root jack --quiet
 sudo adduser jack audio --quiet
-sudo cp jackdrc /etc/
+sudo cp /home/pistomp/pi-stomp/setup/mod/jackdrc /etc/
 sudo chmod +x /etc/jackdrc
 sudo chown jack:jack /etc/jackdrc
-sudo cp 80 /etc/authbind/byport/
+sudo cp /home/pistomp/pi-stomp/setup/mod/80 /etc/authbind/byport/
 sudo chmod 500 /etc/authbind/byport/80
-sudo chown pistomp:pistomp /etc/authbind/byport/80
+sudo chown $USER:$USER /etc/authbind/byport/80
