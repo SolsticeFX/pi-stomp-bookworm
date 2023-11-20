@@ -29,7 +29,7 @@ sudo cp setup/services/hotspot/etc/dnsmasq.d/wifi-hotspot.conf /etc/dnsmasq.d
 sudo cp setup/services/hotspot/etc/hostapd/hostapd.conf /etc/hostapd
 sudo cp -R setup/services/hotspot/usr/lib/pistomp-wifi /usr/lib
 sudo cp setup/services/hotspot/usr/lib/systemd/system/wifi-hotspot.service /usr/lib/systemd/system
-sudo chown -R pistomp:pistomp /usr/lib/pistomp-wifi
+sudo chown -R $USER:$USER /usr/lib/pistomp-wifi
 sudo chmod +x -R /usr/lib/pistomp-wifi
 
 # USB automounter
