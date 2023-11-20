@@ -8,6 +8,8 @@ Requires=browsepy.service
 [Service]
 LimitRTPRIO=95
 LimitMEMLOCK=infinity
+User=pistomp
+Group=audio
 Environment=HOME=/home/pistomp/data
 Environment=LV2_PATH=/home/pistomp/.lv2
 Environment=LV2_PLUGIN_DIR=/home/pistomp/.lv2
@@ -26,9 +28,8 @@ Environment=PATCHSTORAGE_API_URL=https://patchstorage.com/api/beta/patches
 Environment=PATCHSTORAGE_PLATFORM_ID=8046
 Environment=PATCHSTORAGE_TARGET_ID=8280
 
+#ExecStart=/usr/local/bin/mod-ui
 ExecStart=/usr/bin/authbind /usr/local/bin/mod-ui
-User=pistomp
-Group=pistomp
 Restart=always
 RestartSec=2
 
