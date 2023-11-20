@@ -9,6 +9,6 @@ find . -type f -exec sed -i "s Group=pistomp Group=$USER g" {} +
 
 sudo chmod +x setup.sh stopMod.sh startMod.sh
 
-echo "Making install.sh executable, run ./install.sh to start the installation process"
+echo "Making install.sh executable, run 'nohup ./setup.sh > setup.log | tail -f setup.log' to start the installation process"
 
 
