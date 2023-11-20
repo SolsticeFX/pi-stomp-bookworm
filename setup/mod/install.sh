@@ -23,7 +23,7 @@ sudo apt-get -y install virtualenv python3-pip python3-dev python3-zeroconf buil
                         libavcodec-dev libavutil-dev libbluetooth-dev libboost-dev libeigen3-dev libfftw3-dev libglib2.0-dev libglibmm-2.4-dev \
                         libgtk2.0-dev libgtkmm-2.4-dev liblrdf0-dev libsamplerate0-dev libsigc++-2.0-dev libsndfile1-dev libzita-convolver-dev \
                         libzita-resampler-dev lv2-dev p7zip-full python3-all python3-setuptools libreadline-dev zita-alsa-pcmi-utils hostapd \
-                        dnsmasq iptables python3-smbus liblo-dev python3-liblo libzita-alsa-pcmi-dev authbind rcconf libfluidsynth-dev lockfile-progs
+                        dnsmasq iptables python3-smbus liblo-dev python3-liblo libzita-alsa-pcmi-dev authbind rcconf libfluidsynth-dev lockfile-progs qjackctl
                         
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 
@@ -55,11 +55,11 @@ mkdir -p "Aida DSP Models"
 mkdir -p "NAM Models"
 
 #Jack2
-pushd $(mktemp -d) && git clone https://github.com/moddevices/jack2.git
-pushd jack2
-./waf configure
-./waf build
-sudo ./waf install
+#pushd $(mktemp -d) && git clone https://github.com/moddevices/jack2.git
+#pushd jack2
+#./waf configure
+#./waf build
+#sudo ./waf install
 
 #Browsepy
 pushd $(mktemp -d) && git clone https://github.com/micahvdm/browsepy.git
