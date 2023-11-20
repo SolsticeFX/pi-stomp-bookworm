@@ -9,7 +9,7 @@ LimitMEMLOCK=infinity
 Type=forking
 Environment=LV2_PATH=/home/pistomp/.lv2
 Environment=JACK_PROMISCUOUS_SERVER=jack
-ExecStart=/usr/local/bin/mod-host -p 5555 -f 5556
+ExecStart=/usr/local/bin/mod-host -p 6666 -f 6667
 User=pistomp
 Group=audio
 Restart=always
