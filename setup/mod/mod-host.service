@@ -4,14 +4,14 @@ After=jack.service
 BindsTo=jack.service
 
 [Service]
-LimitRTPRIO=95
+LimitRTPRIO=99
 LimitMEMLOCK=infinity
 Type=forking
 Environment=LV2_PATH=/home/pistomp/.lv2
 Environment=JACK_PROMISCUOUS_SERVER=jack
 ExecStart=/usr/local/bin/mod-host -p 5555 -f 5556
 User=pistomp
-Group=pistomp
+Group=audio
 Restart=always
 RestartSec=2
 
