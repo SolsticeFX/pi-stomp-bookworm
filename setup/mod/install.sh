@@ -23,8 +23,15 @@ sudo apt-get -y install virtualenv python3-pip python3-dev python3-zeroconf buil
                         libavcodec-dev libavutil-dev libbluetooth-dev libboost-dev libeigen3-dev libfftw3-dev libglib2.0-dev libglibmm-2.4-dev \
                         libgtk2.0-dev libgtkmm-2.4-dev liblrdf0-dev libsamplerate0-dev libsigc++-2.0-dev libsndfile1-dev libzita-convolver-dev \
                         libzita-resampler-dev lv2-dev p7zip-full python3-all python3-setuptools libreadline-dev zita-alsa-pcmi-utils hostapd \
-                        dnsmasq iptables python3-smbus liblo-dev python3-liblo libzita-alsa-pcmi-dev authbind rcconf libfluidsynth-dev lockfile-progs qjackctl
+                        dnsmasq iptables python3-smbus liblo-dev python3-liblo libzita-alsa-pcmi-dev authbind rcconf libfluidsynth-dev lockfile-progs qjackctl 
+
+sudo apt install -y xinit 
+sudo apt install -y x11-utils
+sudo apt install -y chromium
+sudo apt install -y gldriver-test
                         
+sudo sed -i 's/console/anybody/g' /etc/X11/Xwrapper.config
+
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 #Install Python Dependancies
