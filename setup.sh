@@ -107,14 +107,14 @@ if [[ $plugins == true ]]; then
 fi
 
 printf "\n===== System tweaks =====\n"
-setup/sys/config_tweaks.sh
-cp setup/sys/bash_aliases ~/.bash_aliases
+#setup/sys/config_tweaks.sh
+#cp setup/sys/bash_aliases ~/.bash_aliases
 
 printf "\n===== Manage services =====\n"
-setup/services/create_services.sh
+#setup/services/create_services.sh
 
 printf "\n===== RT Kernel Install =====\n"
-setup/sys/rtkernel.sh
+#setup/sys/rtkernel.sh
 
 printf "\n===== pi-stomp setup complete - rebooting =====\n"
 sudo reboot now
