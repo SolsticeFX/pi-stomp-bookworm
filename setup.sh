@@ -36,6 +36,7 @@ usage()
 hardware_version=2.0
 has_ttymidi=false
 plugins=true
+dev=false
 
 while getopts 'a:v:pmh' o; do
     case "${o}" in
@@ -55,10 +56,14 @@ while getopts 'a:v:pmh' o; do
 	    usage
 	    exit 0
 	    ;;
-        *)
+	d)
+ 	    dev=true
+	
+	*)
             usage 1>&2
 	    exit 1
             ;;
+	
     esac
 done
 
@@ -84,7 +89,12 @@ if [ ! -z ${audio_card+x} ]; then
 fi
 
 printf "\n===== Mod software install =====\n"
-setup/mod/install.sh
+if [[ $dev == true ]]; then
+	setup/mod/install.sh -d
+else
+	setup/mod/install.sh
+fi
+
 
 printf "\n===== Mod software tweaks =====\n"
 setup/mod-tweaks/mod-tweaks.sh
