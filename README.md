@@ -1,8 +1,37 @@
-# pi-Stomp!
+# SolsticeFX
+## What's new here?
+This Repo adapts Pi-Stomp's implementation of ModDevices pedals to the Raspberry Pi 5 (And Bookworm on Raspberry Pi 4)
+
+### Installation
+-Start with a fresh install of Raspberry Pi OS Lite 64 bit
+
+-Run these lines of code: 
+
+        sudo apt update --fix-missing && sudo apt install -y git
+        git clone https://github.com/SolsticeFX/pi-stomp-bookworm.git pi-stomp
+        cd pi-stomp
+        ./setUsername.sh
+        ./setup -p
+
+ If all went well the Pi will reboot and bring you back to the terminal when it's done!
+
+-Change /usr/lib/systemd/system/jack.service to work with your audio device
+
+### Usage
+-Run ./browserapp.sh to open a chromium window with the pedalboard ui. You can also use your IP address to open this window on another device
+
+To-Do:
+Setup Wizard
+USB Audio [Currently possible on Pi 4 but not Pi 5]
+
+
+
+# From TreeFallSound:
+## pi-Stomp!
 #### pi-Stomp is a DIY high definition, multi-effects stompbox platform for guitar bass and keyboards
 For more info about what it is and what it can do, go to [treefallsound.com](https://treefallsound.com)
 
-## pi-Stomp Software and Firmware
+### pi-Stomp Software and Firmware
 We start with a 64-bit Raspberry Pi lite operating system.  We then add MOD, which is an open source audio host & UI
 created by the awesome folk at moddevices.com
 
@@ -22,7 +51,7 @@ This repository includes:
   * hundreds of LV2 plugins
   * sample pedalboards
 
-## Installing
+### Installing
 For full installation instructions including etching the initial operating system, see [this guide](https://www.treefallsound.com/wiki/doku.php?id=software_installation_64-bit)
 
 After first boot, establish an ssh session to the RPi (the password is the one set during OS install):
