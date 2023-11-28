@@ -17,6 +17,33 @@
 
 set -x
 
+usage()
+{
+    echo "Usage: $(basename $0) [-a <audio_card>] [-v <hardware_version>] [-p] [-m]"
+    echo ""
+    echo "Options:"
+    echo " -d    Install Mod-UI in home directory"
+}
+
+dev=false
+
+while getopts 'a:v:pmh' o; do
+    case "${o}" in
+	h)
+	    usage
+	    exit 0
+	    ;;
+	d)
+ 	    dev=true
+	    ;;
+	*)
+            usage 1>&2
+	    exit 1
+            ;;
+	
+    esac
+done
+
 #Install Dependancies
 sudo apt-get -y install virtualenv python3-pip python3-dev python3-zeroconf build-essential libasound2-dev libjack-jackd2-dev liblilv-dev libjpeg-dev \
                         zlib1g-dev cmake debhelper dh-autoreconf dh-python gperf intltool ladspa-sdk libarmadillo-dev libavahi-gobject-dev \
@@ -79,9 +106,15 @@ pushd mod-host
 make
 sudo make install
 
-#Mod-ui
+if [[ $dev == true ]]; then
+cd /home/pistomp
+git clone https://github.com/SolsticeFX/mod-ui.git
+cd mod-ui
+else
 pushd $(mktemp -d) && git clone https://github.com/SolsticeFX/mod-ui.git
 pushd mod-ui
+fi
+
 chmod +x setup.py
 cd utils
 make
