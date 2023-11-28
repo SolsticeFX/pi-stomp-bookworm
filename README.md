@@ -20,7 +20,7 @@ This Repo adapts Pi-Stomp's implementation of ModDevices pedals to the Raspberry
 ### Usage
 -Run ./browserapp.sh to open a chromium window with the pedalboard ui. You can also use your IP address to open this window on another device
 
-###To-Do:
+### To-Do:
 - Setup Wizard
 - USB Audio [Currently possible on Pi 4 but not Pi 5]
 
