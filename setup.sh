@@ -58,6 +58,7 @@ while getopts 'a:v:pmh' o; do
 	    ;;
 	d)
  	    dev=true
+      	    ;;
 	
 	*)
             usage 1>&2
