@@ -11,4 +11,4 @@ echo "Resolution: $WIDTH x $HEIGHT"
 
 export DISPLAY=:0
 
-startx /usr/bin/chromium --window-position=0,0 --window-size=$WIDTH,$HEIGHT  --app="localhost" --start-maximized --no-default-browser-check --start-fullscreen --kiosk --noerrdialogs --disable-translate --fast --fast-start --disable-features=TranslateUI 
+startx /usr/bin/chromium --window-position=0,0 --window-size=$WIDTH,$HEIGHT  --app="http://localhost" --start-maximized --no-default-browser-check --start-fullscreen --kiosk --noerrdialogs --disable-translate --fast --fast-start --disable-features=TranslateUI 
