@@ -11,7 +11,7 @@ This Repo adapts Pi-Stomp's implementation of ModDevices pedals to the Raspberry
         git clone https://github.com/SolsticeFX/pi-stomp-bookworm.git pi-stomp
         cd pi-stomp
         ./setUsername.sh
-        ./setup -p
+        ./setup.sh -p
 
  If all went well the Pi will reboot and bring you back to the terminal when it's done!
 
