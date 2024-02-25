@@ -62,7 +62,7 @@ sudo sed -i 's/console/anybody/g' /etc/X11/Xwrapper.config
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 #Install Python Dependancies
-sudo pip3 install pyserial==3.0 pystache==0.5.4 aggdraw==1.3.11 scandir backports.shutil-get-terminal-size
+sudo pip3 install pyserial==3.0 pystache==0.5.4 aggdraw==1.3.11 scandir backports.shutil-get-terminal-size websocket
 sudo pip3 install pycrypto
 sudo pip3 install tornado==4.3
 sudo pip3 install Pillow==8.4.0
