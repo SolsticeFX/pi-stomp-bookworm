@@ -15,6 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with pi-stomp.  If not, see <https://www.gnu.org/licenses/>.
 
-pushd $(mktemp -d) && git clone https://github.com/moddevices/mod-ttymidi.git
-pushd mod-ttymidi
+pushd $(mktemp -d) && git clone https://github.com/SolsticeFX/solstice-ttymidi.git
+pushd solstice-ttymidi
 sudo make install
