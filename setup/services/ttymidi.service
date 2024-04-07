@@ -7,7 +7,7 @@ Requires=mod-host.service
 Environment=HOME=/home/pistomp
 WorkingDirectory=/home/pistomp
 Environment=JACK_PROMISCUOUS_SERVER=jack
-ExecStart=/usr/local/bin/ttymidi -s /dev/ttyAMA0 -b 38400
+ExecStart=/usr/local/bin/ttymidi -s /dev/ttyAMA2 -b 38400
 Restart=always
 RestartSec=2
 
